@@ -1,14 +1,23 @@
 # palindrome.py
 
-numbers = [3,4,1,9,6,2,8]
-print(numbers)
-x = int(input("Enter the position of the element to be deleted: "))
-numbers.pop(x)
-print(numbers)
+def rev(inputString):
+    return inputString[::-1]
+def isPalindrome(inputString):
+    reverseString = rev(inputString)
+    if (inputString == reverseString):
+        return True
+    return False
+s = input("Enter a string: ")
+result = isPalindrome(s)
+if result == 1:
+    print("The string is palindrome")
+else:
+    print("The string is not palindrome")
 
 
 output:
-[3, 4, 1, 9, 6, 2, 8]
-Enter the position of the element to be deleted: 4
-[3, 4, 1, 9, 2, 8]
+Enter a string: madam
+The string is palindrome
+
+
 
